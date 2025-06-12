@@ -35,7 +35,7 @@ function LoginAdmin({ onClose, onLogin }) {
           <IoClose color="#415564" size={40} />
         </button>
         <img
-          src="./../src/assets/images/vectors/loginAdmin.png"
+          src="/images/vectors/loginAdmin.png"
           alt="Logo"
           className="w-[70%] h-[70%] m-auto"
         />

@@ -66,7 +66,7 @@ function UploadModal({ onClose, onUploadComplete }) {
         {!showUploadSuccess && (
           <div className="upload-modal-content">
             <img
-              src="./../src/assets/images/vectors/upload2.png"
+              src="/images/vectors/upload2.png"
               alt="Logo"
               className="w-[70%] h-[70%] m-auto"
             />
@@ -107,7 +107,7 @@ function UploadModal({ onClose, onUploadComplete }) {
         {showUploadSuccess && (
           <div className="upload-success-modal-content">
             <img
-              src="./../src/assets/images/vectors/uploadSuccess.png"
+              src="/images/vectors/uploadSuccess.png"
               alt="Logo"
               className="w-[70%] h-[70%] m-auto"
             />

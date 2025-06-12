@@ -1,6 +1,5 @@
 import React from "react";
 import "./../App.css";
-import imageBg from "./../assets/images/loaderBackground.jpg";
 import { FaRegCircleUser } from "react-icons/fa6";
 
 function Welcome({ onUserIconClick, progress = 90 }) {
@@ -15,7 +14,7 @@ function Welcome({ onUserIconClick, progress = 90 }) {
   return (
     <div>
       <img
-        src={imageBg}
+        src="/images/loaderBackground.jpg"
         alt="Background"
         className="object-cover absolute inset-0 h-full w-full object-right"
       />
@@ -28,12 +27,12 @@ function Welcome({ onUserIconClick, progress = 90 }) {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] md:w-3xl">
         <div className="m-auto bg-[rgba(65,85,100,0.5)] rounded-[50px] p-10 mt-4 md:shadow-2xl border-primary border-6">
           <img
-            src="./../src/assets/images/applogo.png"
+            src="/images/applogo.png"
             alt="Logo"
             className={`w-[100%] h-[100%] m-auto`}
           />
           <img
-            src="./../src/assets/images/4.png"
+            src="/images/4.png"
             className="w-[65px] h-[65px] md:w-[100px] md:h-[100px] m-auto mt-10 animate-bounce"
           />
           <h2 className="text-center mt-2 lobster text-primary text-[32px] md:text-[48px]">

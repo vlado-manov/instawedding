@@ -31,7 +31,7 @@ function LoginError({ onClose, onRetry }) {
           <IoClose color="#415564" size={40} />
         </button>
         <img
-          src="./../src/assets/images/vectors/loginerror.png"
+          src="/images/vectors/loginerror.png"
           alt="Logo"
           className="w-[70%] h-[70%] m-auto -mt-12"
         />
