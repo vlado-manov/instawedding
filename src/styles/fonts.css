@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Poiret One";
+  src: url("../assets/fonts/PoiretOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url("../assets/fonts/Lobster-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../assets/fonts/Comfortaa-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../assets/fonts/Comfortaa-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../assets/fonts/Comfortaa-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../assets/fonts/Comfortaa-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../assets/fonts/Comfortaa-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lobster {
+  font-family: "Lobster", cursive;
+}
+
+.comfortaa-light {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 300;
+}
+
+.comfortaa-regular {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 400;
+}
+
+.comfortaa-medium {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 500;
+}
+
+.comfortaa-semibold {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 600;
+}
+
+.comfortaa-bold {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+}
+
+.poiretOne {
+  font-family: "Poiret One", sans-serif;
+}
