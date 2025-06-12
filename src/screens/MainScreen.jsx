@@ -11,11 +11,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // Images
-import imagePortrait from "/images/imagePortrait.jpg";
-import imagePortraitA from "/images/imagePortrait2.jpg";
-import imagePortraitB from "/images/imagePortrait3.jpg";
-import imageLandscape from "/images/imageLandscape.jpg";
-import imageLandscapeA from "/images/imageLandscape2.jpg";
+import imagePortrait from "./../assets/images/imagePortrait.jpg";
+import imagePortraitA from "./../assets/images/imagePortrait2.jpg";
+import imagePortraitB from "./../assets/images/imagePortrait3.jpg";
+import imageLandscape from "./../assets/images/imageLandscape.jpg";
+import imageLandscapeA from "./../assets/images/imageLandscape2.jpg";
 import { IoClose } from "react-icons/io5";
 import UploadModal from "../components/UploadModal";
 
