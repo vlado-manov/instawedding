@@ -155,7 +155,7 @@ const UploadCard = ({ image, index, onOpenComments }) => {
           value={commentText}
           onChange={(e) => setCommentText(e.target.value)}
           placeholder="Напиши коментар..."
-          className="w-full border-b border-[#415564] bg-transparent outline-none py-1 mb-2 text-sm text-[#415564]"
+          className="w-full border-b border-[#415564] bg-transparent outline-none py-1 mb-2 text-[16px] text-[#415564]"
         />
         <RiSendPlane2Line
           color="#415564"
