@@ -19,9 +19,9 @@ function LoginError({ onClose, onRetry }) {
   }, [onClose]);
 
   return (
-    <div className="fixed top-0 bottom left-0 right-0 bg-[rgba(0,0,0,0.7)] z-50 w-full h-full">
+    <div className="fixed top-0 bottom left-0 right-0 bg-[rgba(0,0,0,0.7)] z-50 w-full h-full max-w-screen-md mx-auto">
       <div
-        className="fixed top-1/2 left-0 right-0 -translate-y-1/2 mx-4 shadow-2xl bg-white rounded-2xl p-4 z-50"
+        className="absolute top-1/2 left-0 right-0 -translate-y-1/2 mx-4 shadow-2xl bg-white rounded-2xl p-4 z-50"
         ref={loginErrorRef}
       >
         <button
@@ -33,7 +33,7 @@ function LoginError({ onClose, onRetry }) {
         <img
           src="/images/vectors/loginerror.png"
           alt="Logo"
-          className="w-[70%] h-[70%] m-auto -mt-12"
+          className="w-[70%] h-[70%] m-auto -mt-12 object-contain max-h-[60vh]"
         />
         <h1 className="poiretOne text-secondary text-[32px] text-center -mt-12">
           Опа, кой сгреши паролата?

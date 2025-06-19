@@ -23,9 +23,9 @@ function LoginAdmin({ onClose, onLogin }) {
   }, [onClose]);
 
   return (
-    <div className="fixed top-0 bottom left-0 right-0 bg-[rgba(0,0,0,0.7)] z-50 w-full h-full">
+    <div className="fixed top-0 bottom left-0 right-0 bg-[rgba(0,0,0,0.7)] z-50 w-full h-full max-w-screen-md mx-auto">
       <div
-        className="fixed top-1/2 left-0 right-0 -translate-y-1/2 mx-4 shadow-2xl bg-white rounded-2xl p-4 z-50"
+        className="absolute top-1/2 left-0 right-0 -translate-y-1/2 mx-4 shadow-2xl bg-white rounded-2xl p-4 z-50"
         ref={loginModalRef}
       >
         <button
@@ -37,7 +37,7 @@ function LoginAdmin({ onClose, onLogin }) {
         <img
           src="/images/vectors/loginAdmin.png"
           alt="Logo"
-          className="w-[70%] h-[70%] m-auto"
+          className="w-[70%] h-[70%] m-auto max-h-[60vh] object-contain"
         />
         <input
           placeholder="Кой чука?"

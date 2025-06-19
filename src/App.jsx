@@ -3,18 +3,38 @@ import BottomNavigation from "./components/BottomNavigation";
 import MainScreen from "./screens/MainScreen";
 import Welcome from "./screens/Welcome";
 import Schedule from "./screens/Shedule";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import UploadModal from "./components/UploadModal";
 import LoginAdmin from "./components/LoginAdmin";
 import LoginError from "./components/LoginError";
 
 function App() {
   const [screen, setScreen] = useState("welcome"); // 'welcome' | 'main' | 'schedule'
-  const [welcomeProgress, setWelcomeProgress] = useState(50);
+  const [welcomeProgress, setWelcomeProgress] = useState(0);
   const [showUploadModal, setShowUploadModal] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showLoginError, setShowLoginError] = useState(false);
   const [showUploadSuccess, setShowUploadSuccess] = useState(false);
+
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
+  const refreshImages = () => {
+    setRefreshTrigger((prev) => prev + 1);
+  };
+
+  useEffect(() => {
+    const savedName = localStorage.getItem("guestName");
+    if (savedName) {
+      setWelcomeProgress(100);
+      setScreen("main");
+    }
+  }, []);
+
+  const handleEnter = () => {
+    setTimeout(() => {
+      setWelcomeProgress(100);
+      setScreen("main");
+    }, 5000); // Give the progress bar some time to animate
+  };
 
   const openUploadModal = () => setShowUploadModal(true);
   const closeUploadModal = () => setShowUploadModal(false);
@@ -31,6 +51,8 @@ function App() {
       username.toLowerCase() === "tedi" &&
       password.toLowerCase() === "kriskoegei"
     ) {
+      localStorage.setItem("isAdmin", "true");
+      localStorage.setItem("guestName", username);
       setShowLoginModal(false);
       setShowLoginError(false);
       setWelcomeProgress(100);
@@ -48,12 +70,21 @@ function App() {
   const openLoginModal = () => setShowLoginModal(true);
 
   return (
-    <div className="flex-1">
+    <div className="flex-1 w-full max-w-screen-md mx-auto">
       {screen === "welcome" && (
-        <Welcome onUserIconClick={openLoginModal} progress={welcomeProgress} />
+        <Welcome
+          onUserIconClick={openLoginModal}
+          onFinishWelcome={() => setScreen("main")} // ✅ NEW
+        />
       )}
 
-      {screen === "main" && <MainScreen onOpenUpload={openUploadModal} />}
+      {screen === "main" && (
+        <MainScreen
+          onOpenUpload={openUploadModal}
+          refreshTrigger={refreshTrigger}
+        />
+      )}
+
       {screen === "schedule" && <Schedule />}
 
       {(screen === "main" || screen === "schedule") && (
@@ -75,7 +106,13 @@ function App() {
           }}
         />
       )}
-      {showUploadModal && <UploadModal onClose={closeUploadModal} />}
+      {showUploadModal && (
+        <UploadModal
+          onClose={closeUploadModal}
+          onUploadComplete={handleUploadComplete}
+          refreshImages={refreshImages}
+        />
+      )}
     </div>
   );
 }
