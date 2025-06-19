@@ -9,6 +9,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { GrHide } from "react-icons/gr";
+import { formatTimeAgo } from "../utils/time";
 
 const UploadCard = ({ image, index, onOpenComments }) => {
   const isOdd = index % 2 === 0;
@@ -98,7 +99,12 @@ const UploadCard = ({ image, index, onOpenComments }) => {
         >
           {image.imageUrls.map((src, idx) => (
             <SwiperSlide key={idx}>
-              <div className="relative w-full aspect-[4/3] bg-white rounded-xl overflow-hidden">
+              <div
+                className={`relative w-full ${
+                  image.isPortrait ? "aspect-[3/4]" : "aspect-[4/3]"
+                } bg-white rounded-xl overflow-hidden`}
+              >
+                {" "}
                 <img
                   src={src}
                   alt={`Slide ${idx}`}
@@ -107,7 +113,7 @@ const UploadCard = ({ image, index, onOpenComments }) => {
                     setShowHeart(true);
                     setTimeout(() => setShowHeart(false), 1000);
                   }}
-                  className="absolute top-0 left-0 w-full h-full object-contain"
+                  className="absolute top-0 left-0 w-full h-full object-cover"
                 />
                 {showHeart && (
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -132,7 +138,10 @@ const UploadCard = ({ image, index, onOpenComments }) => {
           ></div>
           <span className="font-comfortaa text-[#415564]">
             {image.uploader}
-            <span className="text-xs text-[#415564]"> (преди 2 минути)</span>
+            <span className="text-xs text-[#415564]">
+              {" "}
+              ({formatTimeAgo(image.createdAt)})
+            </span>
           </span>
         </div>
         <button
