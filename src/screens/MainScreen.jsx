@@ -14,6 +14,7 @@ function MainScreen({ onOpenUpload, refreshTrigger }) {
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const username = localStorage.getItem("guestName");
+  const [showDropdown, setShowDropdown] = useState(false);
 
   // ✅ Load isAdmin state on client side
   useEffect(() => {
@@ -88,10 +89,27 @@ function MainScreen({ onOpenUpload, refreshTrigger }) {
 
   return (
     <div className="py-6 max-w-lg bg-white relative pb-[80px] mx-auto">
-      <p className="comfortaa-regular text-[14px] text-right px-2 py-1 mx-2 text-primary rounded-full inline-block bg-secondary float-right">
+      <p
+        onClick={() => setShowDropdown((prev) => !prev)}
+        className="comfortaa-regular text-[14px] text-right px-2 py-1 mx-2 text-primary rounded-full inline-block bg-secondary float-right"
+      >
         <FaRegUser color="#eebb7a" className="inline mb-1 mr-1" size={12} />
         {username}
       </p>
+      {showDropdown && (
+        <div className="absolute right-2 top-[56px] mt-1 bg-white border border-gray-300 shadow-lg rounded-md z-50 flex items-center justify-center cursor-pointer">
+          <button
+            className="block w-full text-left px-4 py-2 text-sm text-[#e74c3c] hover:bg-gray-100"
+            onClick={() => {
+              localStorage.removeItem("isAdmin");
+              localStorage.removeItem("guestName");
+              window.location.reload();
+            }}
+          >
+            Излез
+          </button>
+        </div>
+      )}
       <div className="px-4">
         <img
           src="/images/applogo-primary.png"

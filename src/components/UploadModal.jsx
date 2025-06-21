@@ -142,12 +142,12 @@ function UploadModal({ onClose, onUploadComplete, refreshImages }) {
             )}
 
             <div className="flex gap-2 justify-center items-center">
-              <button
+              {/* <button
                 onClick={onClose}
                 className="rounded-[16px] w-full bg-secondary text-white comfortaa-bold custom-shadow p-3 w-full uppercase my-4 text-[14px]"
               >
                 По-късно
-              </button>
+              </button> */}
               <input
                 type="file"
                 accept="image/*"
@@ -158,7 +158,7 @@ function UploadModal({ onClose, onUploadComplete, refreshImages }) {
               />
               <label
                 htmlFor="image-upload-input"
-                className="cursor-pointer rounded-[16px] w-full bg-primary text-white comfortaa-bold custom-shadow p-3 w-full uppercase my-4 text-[14px]"
+                className="cursor-pointer rounded-[16px] w-full text-center bg-primary text-white comfortaa-bold custom-shadow p-3 w-full uppercase my-4 text-[14px]"
               >
                 Избери снимки
               </label>

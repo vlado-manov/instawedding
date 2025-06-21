@@ -46,13 +46,26 @@ function App() {
     setShowUploadSuccess(false);
   };
 
+  const allowedUsers = [
+    { username: "tedi", password: "kriskoegei" },
+    { username: "milen", password: "mendisushto" },
+    { username: "tanita", password: "begachka" },
+    { username: "vlado", password: "ribamech" },
+  ];
+
   const handleLogin = (username, password) => {
-    if (
-      username.toLowerCase() === "tedi" &&
-      password.toLowerCase() === "kriskoegei"
-    ) {
+    const found = allowedUsers.find(
+      (user) =>
+        user.username.toLowerCase() === username.toLowerCase() &&
+        user.password.toLowerCase() === password.toLowerCase()
+    );
+
+    if (found) {
       localStorage.setItem("isAdmin", "true");
-      localStorage.setItem("guestName", username);
+      localStorage.setItem(
+        "guestName",
+        username.charAt(0).toUpperCase() + username.slice(1).toLowerCase()
+      );
       setShowLoginModal(false);
       setShowLoginError(false);
       setWelcomeProgress(100);

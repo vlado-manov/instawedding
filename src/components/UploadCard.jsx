@@ -86,7 +86,7 @@ const UploadCard = ({ image, index, onOpenComments }) => {
         />
       )}
 
-      <div className="overflow-hidden rounded-xl mb-0 relative">
+      <div className="overflow-hidden rounded-lg mb-0 relative">
         <Swiper
           pagination={{
             clickable: true,
@@ -95,14 +95,14 @@ const UploadCard = ({ image, index, onOpenComments }) => {
             },
           }}
           modules={[Pagination]}
-          className="rounded-xl overflow-hidden"
+          className="overflow-hidden"
         >
           {image.imageUrls.map((src, idx) => (
             <SwiperSlide key={idx}>
               <div
                 className={`relative w-full ${
                   image.isPortrait ? "aspect-[3/4]" : "aspect-[4/3]"
-                } bg-white rounded-xl overflow-hidden`}
+                } bg-white overflow-hidden`}
               >
                 {" "}
                 <img
