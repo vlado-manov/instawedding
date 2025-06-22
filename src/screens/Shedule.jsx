@@ -13,7 +13,7 @@ function Shedule() {
           <div className="flex flex-col justify-center relative">
             <div className="h-[6px] bg-secondary w-[40px] absolute top-1/2 right-0 translate-x-1/2"></div>
             <img
-              src="/images/vectors/ritual.png"
+              src="/images/vectors/compressed/ritual.png"
               alt="Logo"
               className="w-full h-auto m-auto pl-2"
             />
@@ -27,7 +27,7 @@ function Shedule() {
           <div className="flex flex-col justify-center relative">
             <div className="h-[6px] bg-secondary w-[40px] absolute top-1/2 right-0 translate-x-1/2"></div>
             <img
-              src="/images/vectors/cocktail.png"
+              src="/images/vectors/compressed/cocktail.png"
               alt="Logo"
               className="w-[65%] h-auto m-auto pl-2"
             />
@@ -41,7 +41,7 @@ function Shedule() {
           <div className="flex flex-col justify-center relative">
             <div className="h-[6px] bg-secondary w-[40px] absolute top-1/2 right-0 translate-x-1/2"></div>
             <img
-              src="/images/vectors/weddingcake.png"
+              src="/images/vectors/compressed/weddingcake.png"
               alt="Logo"
               className="w-[65%] h-auto m-auto pl-2"
             />
@@ -57,7 +57,7 @@ function Shedule() {
           <div className="flex flex-col justify-center relative">
             <div className="h-[6px] bg-secondary w-[40px] absolute top-1/2 left-0 -translate-x-1/2"></div>
             <img
-              src="/images/vectors/camera.png"
+              src="/images/vectors/compressed/camera.png"
               alt="Logo"
               className="w-[65%] h-auto m-auto pl-2"
             />
@@ -71,7 +71,7 @@ function Shedule() {
           <div className="flex flex-col justify-center relative">
             <div className="h-[6px] bg-secondary w-[40px] absolute top-1/2 left-0 -translate-x-1/2"></div>
             <img
-              src="/images/vectors/dinner.png"
+              src="/images/vectors/compressed/dinner.png"
               alt="Logo"
               className="w-[65%] h-auto m-auto pl-2"
             />
@@ -84,7 +84,7 @@ function Shedule() {
           <div className="h-[56px] w-full"></div>
           <div className="flex flex-col justify-center relative">
             <img
-              src="/images/vectors/party.png"
+              src="/images/vectors/compressed/party.png"
               alt="Logo"
               className="w-[65%] h-auto m-auto pl-2"
             />

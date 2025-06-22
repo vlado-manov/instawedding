@@ -119,7 +119,7 @@ function UploadModal({ onClose, onUploadComplete, refreshImages }) {
         {!showUploadSuccess && (
           <div className="upload-modal-content">
             <img
-              src="/images/vectors/upload2.png"
+              src="/images/vectors/compressed/upload2.webp"
               alt="Logo"
               className="w-[70%] h-[70%] m-auto object-contain max-h-[60vh]"
             />
@@ -170,7 +170,7 @@ function UploadModal({ onClose, onUploadComplete, refreshImages }) {
         {showUploadSuccess && (
           <div className="upload-success-modal-content">
             <img
-              src="/images/vectors/uploadSuccess.png"
+              src="/images/vectors/compressed/uploadSuccess.webp"
               alt="Logo"
               className="w-[70%] h-[70%] m-auto object-contain max-h-[60vh]"
             />

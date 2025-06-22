@@ -25,7 +25,7 @@ const CommentsBox = ({ onClose, image }) => (
             </div>
             <div
               className="text-sm text-white comfortaa-regular border-primary border-b-1 pb-2 w-full"
-              style={{ whiteSpace: "pre-wrap", wordBreak: "break-all" }}
+              style={{ whiteSpace: "pre-wrap", wordBreak: "break-word" }}
             >
               <span className="font-sans font-bold mr-1">{comment.user}</span>
               {comment.text}

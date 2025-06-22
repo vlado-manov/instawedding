@@ -177,7 +177,7 @@ const UploadCard = ({ image, index, onOpenComments }) => {
       {comments.length > 0 && (
         <div
           className="text-sm text-[#415564] comfortaa-regular"
-          style={{ whiteSpace: "pre-wrap", wordBreak: "break-all" }}
+          style={{ whiteSpace: "pre-wrap", wordBreak: "break-word" }}
         >
           <span className="font-sans font-bold">{comments.at(-1).user}</span>{" "}
           {comments.at(-1).text}

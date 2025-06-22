@@ -35,7 +35,7 @@ function LoginAdmin({ onClose, onLogin }) {
           <IoClose color="#415564" size={40} />
         </button>
         <img
-          src="/images/vectors/loginAdmin.png"
+          src="/images/vectors/compressed/loginAdmin.webp"
           alt="Logo"
           className="w-[70%] h-[70%] m-auto max-h-[60vh] object-contain"
         />
